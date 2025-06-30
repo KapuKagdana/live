@@ -1,0 +1,76 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(-45deg, #0099ff, #00ffcc, #ffaa00, #ff0066);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  padding: 20px;
+  margin: 0;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.city {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.city:hover {
+  transform: translateY(-8px);
+}
+
+.city h2 {
+  margin-bottom: 10px;
+  color: #ffd54f;
+}
+
+.clock {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #ffcc80;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.temperature {
+  font-size: 1.3em;
+  color: #ffe082;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 768px) {
+  .city {
+    width: 90%;
+  }
+}
